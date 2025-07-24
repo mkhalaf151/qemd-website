@@ -3,24 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QEMD - Where Trust Becomes Architecture</title>
-  <meta name="description" content="Ethical infrastructure for quantum-age decision systems." />
-  <meta property="og:title" content="QEMD - Where Trust Becomes Architecture" />
-  <meta property="og:description" content="Explore ethical infrastructure for decision systems in a quantum age." />
-  <meta property="og:url" content="https://qemd.io" />
-  <meta property="og:type" content="website" />
+  <title>QEMD Systems</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- For API calls -->
-  <style>
-    /* Custom styles to enhance integration */
-    .results-box {
-      border: 2px solid #4a5568;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 0.5rem;
-      background-color: #2d3748;
-    }
-  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
@@ -31,12 +15,6 @@
       <a href="#platform" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded text-white">Explore the Platform</a>
       <a href="#founder" class="border border-white px-6 py-3 rounded hover:bg-white hover:text-gray-900">Meet the Founder</a>
     </div>
-    <div id="results" class="results-box mt-6 hidden">
-      <h3 class="text-xl font-semibold">Live Detection Results</h3>
-      <p id="f1-score">F1-Score: N/A</p>
-      <p id="precursor-rate">Precursor Flag Rate: N/A</p>
-      <p id="latency">Latency: N/A</p>
-    </div>
   </section>
 
   <section class="bg-gray-800 py-20 px-6 text-center" id="platform">
@@ -45,7 +23,7 @@
       QEMD‑ENTRa is the world’s first quantum epistemic intelligence architecture unifying cybersecurity, organizational trust analytics, and forensic validation under a unified decision model. Free from conventional pattern recognition, QEMD‑ENTRa maps the topology of trust detecting drift, entropy, and adversarial misalignment before breaches surface.
     </p>
     <p class="max-w-3xl mx-auto text-lg mt-4">
-      At its core lies the Holomorphic Threat Intelligence Engine (HTIE): a quantum native detection module utilizing complex valued root analysis, non-orthogonal classification, self healing logic, and IP ethical enforcement to preserve system integrity during active defense. The architecture aligns with NSA and DoD directives for zero trust architecture (ZTA), post quantum cryptographic resilience, and real time telemetry assurance, offering compliance pathways with CNSSP-12, NIST SP 800-207, and NSA’s Commercial Solutions for Classified (CSfC) guidance. Additional capabilities are considered sensitive and are governed under Internal Restricted Access Regulations (IRAR) and applicable classification protocols. Unlike classical self healing systems that react to breach events or predefined anomalies, HTIE introduces the world’s first quantum informed self healing engine. By embedding IP ethical logic, the system restores integrity through non linear trust realignment, enabling real time corrections based on ethical drift, adversarial resonance, and misaligned behavioral vectors before conventional systems would register an attack.
+     At its core lies the Holomorphic Threat Intelligence Engine (HTIE): a quantum native detection module utilizing complex valued root analysis, non-orthogonal classification, self healing logic, and IP ethical enforcement to preserve system integrity during active defense. The architecture aligns with NSA and DoD directives for zero trust architecture (ZTA), post quantum cryptographic resilience, and real time telemetry assurance, offering compliance pathways with CNSSP-12, NIST SP 800-207, and NSA’s Commercial Solutions for Classified (CSfC) guidance. Additional capabilities are considered sensitive and are governed under Internal Restricted Access Regulations (IRAR) and applicable classification protocols. Unlike classical self healing systems that react to breach events or predefined anomalies, HTIE introduces the world’s first quantum informed self healing engine. By embedding IP ethical logic, the system restores integrity through non linear trust realignment, enabling real time corrections based on ethical drift, adversarial resonance, and misaligned behavioral vectors before conventional systems would register an attack.
     </p>
     <p class="max-w-3xl mx-auto text-lg mt-4">
       Deployed across:
@@ -56,7 +34,6 @@
     <p class="max-w-3xl mx-auto text-lg mt-4">
       HTIE bridges quantum theory, behavioral telemetry, and regulatory compliance creating the world’s first cognitive architecture built not only to detect threats but to evaluate decisions for truth, integrity, and systemic coherence across high‑stakes national, financial, and cloud infrastructures.
     </p>
-    <button id="simulate-btn" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded text-white mt-6">Simulate Detection</button>
   </section>
 
   <section class="bg-gray-900 py-16 px-6">
@@ -94,28 +71,5 @@ With a background spanning quantum logic, emotional intelligence, and systems tr
     <p>© 2025 QEMD-ENTRa Systems | <a href="mailto:mike@qemd.io" class="underline">mike@qemd.io</a> | <a href="#" class="underline">LinkedIn</a></p>
   </footer>
 
-  <script>
-    // JavaScript to interact with Flask backend
-    document.getElementById('simulate-btn').addEventListener('click', async () => {
-      try {
-        const response = await axios.post('http://localhost:5000/simulate', {
-          trust_metric: Math.random() * 0.3 + 0.7,
-          anomaly_metric: Math.random() * 0.2,
-          behavior_metric: Math.random() * 0.2 + 0.8
-        });
-        const { threat_detected, threat_meta } = response.data;
-        document.getElementById('results').classList.remove('hidden');
-        document.getElementById('f1-score').textContent = `F1-Score: ${threat_meta.hybrid_score.toFixed(2)} (Est.)`;
-        document.getElementById('precursor-rate').textContent = `Precursor Flag Rate: ${threat_meta.precursor_flag ? 'Detected' : 'Not Detected'}`;
-        document.getElementById('latency').textContent = `Latency: ${threat_meta.latency_μs.toFixed(2)} μs`;
-      } catch (error) {
-        console.error('Simulation error:', error);
-        document.getElementById('results').classList.remove('hidden');
-        document.getElementById('f1-score').textContent = 'F1-Score: Error';
-        document.getElementById('precursor-rate').textContent = 'Precursor Flag Rate: Error';
-        document.getElementById('latency').textContent = 'Latency: Error';
-      }
-    });
-  </script>
 </body>
 </html>
