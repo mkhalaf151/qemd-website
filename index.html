@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QEMD-ENTRa Modules</title>
+
+  <!-- SEO + Social -->
+  <meta name="description" content="QEMD-ENTRa builds safety-critical AI: overconfidence detection, dark communications, and physics-grounded anomaly detection for mission-critical and regulated environments." />
+  <link rel="canonical" href="https://www.qemd.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="QEMD-ENTRa Modules" />
+  <meta property="og:description" content="Overconfidence detection, dark communications, and physics-grounded anomaly detection." />
+  <meta property="og:url" content="https://www.qemd.io/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#0d1117" />
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+  <style>
+    body { background-color:#2c3e50; color:#fff; padding:20px; }
+    .module-card { background:#34495e; border-radius:10px; padding:15px; margin-bottom:20px; }
+    .module-card h4 { color:#2ecc71; }
+    .module-card ul { margin-left:20px; margin-bottom:10px; }
+    .module-card a.btn { margin-right:10px; }
+    .spec-section { margin-bottom:15px; padding:10px; }
+    code { background:#7f8c8d; padding:2px 5px; border-radius:3px; }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="https://www.qemd.io/" rel="home" aria-label="QEMD-ENTRa Home">QEMD-ENTRa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#modules">Modules</a></li>
+          <li class="nav-item"><a class="nav-link" href="#specifications">Specifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#integrations">Integrations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Modules -->
+    <section id="modules">
+      <h1>QEMD-ENTRa Modules</h1>
+      <p class="lead">Preview of three patent-pending modules. Join the early-access list to pilot in lab or field environments.</p>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="module-card">
+            <h4>Dark Communicator <span class="badge bg-secondary">Coming soon</span></h4>
+            <p>Software-first secure channel with quantum-inspired key derivation and in-band fidelity scoring. Built for spectrum-constrained, GPS-denied, and contested environments.</p>
+            <ul>
+              <li>Hardware optional: runs over existing radios, mesh, or wired links.</li>
+              <li>HKDF-based keying with tamper alerts and trust downgrades.</li>
+              <li>Fidelity telemetry to gate coordination boosts autonomously.</li>
+              <li>Edge-attestable logs with hash-chained ledger integration.</li>
+            </ul>
+            <a class="btn btn-success" href="mailto:mike@qemd.io?subject=Early%20Access%20Request%20-%20Dark%20Communicator">Join Early Access</a>
+            <a class="btn btn-primary" href="mailto:mike@qemd.io?subject=Dark%20Communicator%20-%20More%20Info">Learn More</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="module-card">
+            <h4>WrongUnraveling Detector <span class="badge bg-secondary">Coming soon</span></h4>
+            <p>Overconfidence and drift detection for autonomous systems and AI agents. Flags confidence-evidence gaps with adaptive thresholds and audit-grade telemetry.</p>
+            <ul>
+              <li>Standalone library or edge service with JSONL telemetry.</li>
+              <li>Works on-device without model retraining or weight sharing.</li>
+              <li>One-click evidence packs for compliance and forensics.</li>
+              <li>SDK hooks for planners, simulators, CI pipelines, and LLM stacks.</li>
+            </ul>
+            <a class="btn btn-success" href="mailto:mike@qemd.io?subject=Pilot%20Request%20-%20WrongUnraveling%20Detector">Request Pilot</a>
+            <a class="btn btn-primary" href="mailto:mike@qemd.io?subject=Wrong%20Unraveling%20Detector%20-%20More%20Info">Learn More</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="module-card">
+            <h4>Dark State Detector <span class="badge bg-secondary">Coming soon</span></h4>
+            <p>Quantum-inspired state sanity checker. Compares live state vectors against WKB-style references and updates a curvature tensor to expose deep misalignment.</p>
+            <ul>
+              <li>Physics-plausibility score and anomaly magnitude per tick.</li>
+              <li>Damping hooks for planners and risk gates.</li>
+              <li>Pure software (optional hardware accel).</li>
+              <li>JSON / Protobuf API with edge-first logging.</li>
+            </ul>
+            <a class="btn btn-success" href="mailto:mike@qemd.io?subject=Early%20Access%20List%20-%20Dark%20State%20Detector">Get on the List</a>
+            <a class="btn btn-primary" href="mailto:mike@qemd.io?subject=Dark%20State%20Detector%20-%20More%20Info">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specifications -->
+    <section id="specifications">
+      <h1>Specifications</h1>
+
+      <div class="spec-section">
+        <h3>Dark Communicator</h3>
+        <ul>
+          <li><strong>Transport</strong>: Any byte stream: UDP, TCP, serial, mesh radios. Hardware optional.</li>
+          <li><strong>Crypto</strong>: HKDF-derived session keys, per-packet nonces, authenticated framing.</li>
+          <li><strong>Fidelity scoring</strong>: In-band score per exchange; trust downgrades when anomalous.</li>
+          <li><strong>Attestation</strong>: Hash-chained ledger writes with optional RFC3161 notarization.</li>
+          <li><strong>Footprint</strong>: &lt; 300 KB core library; runs in user space.</li>
+        </ul>
+        <p>Outcome: Gate coordination boosts by real-time link fidelity instead of hope.</p>
+      </div>
+
+      <div class="spec-section">
+        <h3>WrongUnraveling Detector</h3>
+        <p><em>v1.0 • Model-agnostic SDK</em></p>
+        <h4>What it does</h4>
+        <ul>
+          <li>Detects and steers away from overconfident failures in LLMs/VLMs.</li>
+          <li>Hybrid OCI: confidence-evidence gap + normalized semantic entropy.</li>
+          <li>Superposition fusion: blend of policy and evidence.</li>
+          <li>VTI steering: nudges latents toward stability when risk spikes.</li>
+          <li>Auditability: JSONL telemetry + hash-chained evidence records.</li>
+        </ul>
+        <h4>Specifications</h4>
+        <ul>
+          <li><strong>Latency</strong>: ~2 ms p95 (CPU) for 1k inputs; ~0.8 ms with GPU acceleration.</li>
+          <li><strong>Inputs</strong>: Confidence / TRSD (or JSD), optional generations, policy distribution, evidence vector, fidelity/coherence.</li>
+          <li><strong>Outputs</strong>: Hybrid OCI, severity tier, recommended action, optional fused distribution.</li>
+          <li><strong>Telemetry</strong>: JSONL with timestamps, flags, thresholds, and hash chain.</li>
+          <li><strong>Footprint</strong>: &lt; 10 MB; CPU-first.</li>
+        </ul>
+        <pre>
+from wrong_unraveling_detector import WrongUnravelingDetector
+import numpy as np
+
+detector = WrongUnravelingDetector(trsd_threshold=0.30, semantic_n=8)
+
+confidence = 0.90
+trsd = 0.20
+p_classical = np.random.dirichlet(np.ones(64))
+evidence = np.random.randn(64)
+generations = np.random.randn(8, 64)  # optional
+
+result = detector.decide(confidence=confidence,
+                         trsd_score=trsd,
+                         p_classical=p_classical,
+                         evidence=evidence,
+                         generations=generations,
+                         fidelity=0.95,
+                         coherence=0.9,
+                         entropy=0.1)
+
+print(result["action"], result["scores"])
+        </pre>
+      </div>
+
+      <div class="spec-section">
+        <h3>Dark State Detector</h3>
+        <ul>
+          <li><strong>Method</strong>: WKB-style reference, curvature tensor updates, mismatch norm as anomaly.</li>
+          <li><strong>Fallback</strong>: Classical mode for platforms without quantum libs; same API.</li>
+          <li><strong>API</strong>: <code>score(state_vec) → anomaly, physics_plausibility</code>; emits JSONL telemetry.</li>
+          <li><strong>Use cases</strong>: Physics sanity for guidance, black-box monitor for ML policies, risk-gated planning.</li>
+        </ul>
+        <a class="btn btn-success" href="mailto:mike@qemd.io?subject=Join%20List%20-%20Dark%20State%20Detector">Get on the List</a>
+      </div>
+    </section>
+
+    <!-- Integrations -->
+    <section id="integrations">
+      <h1>Integrations</h1>
+
+      <div class="spec-section">
+        <h3>OpenAI (GPT/ChatGPT)</h3>
+        <p>Call <code>detector.decide()</code> post-logits, or <code>batch_detect()</code> for bulk.</p>
+        <p>Use cases: ChatGPT Enterprise add-on safety; internal tools with guardrails.</p>
+        <p>Buyer value: safety + auditability (hash-chained ledger) for regulated orgs.</p>
+      </div>
+
+      <div class="spec-section">
+        <h3>Microsoft (Azure OpenAI / Copilot)</h3>
+        <p>Insert as a Semantic Kernel step or LangChain link.</p>
+        <p>Azure ML: batch-score outputs and block regressions via CI.</p>
+        <p>Buyer value: Responsible AI posture; easy AKS containerization.</p>
+      </div>
+
+      <div class="spec-section">
+        <h3>Meta (Llama)</h3>
+        <p>Transformers: plug in post-softmax using <code>AutoModelForCausalLM</code>.</p>
+        <p>Multi-agent dark comms with per-agent HKDF keys + fidelity scoring.</p>
+        <p>Buyer value: open-model flexibility with enterprise guardrails.</p>
+      </div>
+
+      <div class="spec-section">
+        <h3>Frameworks & Deployment</h3>
+        <p>LangChain • Haystack (RAG) • Semantic Kernel.</p>
+        <p>HTTP/gRPC microservice for language-agnostic stacks.</p>
+        <p><code>pip</code> for app-embedded use; Docker for on-prem; serverless for bursty checks.</p>
+        <p>Exports JSONL telemetry to S3/Blob/GCS; SIEM-friendly.</p>
+        <a class="btn btn-primary" href="mailto:mike@qemd.io?subject=Engineering%20Discussion%20Request">Talk to Engineering</a>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+      <h1>Commercial Readiness & Pricing</h1>
+
+      <div class="spec-section">
+        <h3>Performance</h3>
+        <ul>
+          <li><strong>Latency</strong>: ~2 ms p95 (CPU) for 1k decisions; ~0.8 ms with GPU.</li>
+          <li><strong>Hallucination reduction</strong>: Target 50–80% on TruthfulQA-style prompts (validation in progress).</li>
+        </ul>
+      </div>
+
+      <div class="spec-section">
+        <h3>Tiers</h3>
+        <ul>
+          <li><strong>Indie</strong>: $99 one-time (local use, single project).</li>
+          <li><strong>Pro</strong>: $199 one-time or $20/mo (priority updates, email support).</li>
+          <li><strong>Enterprise</strong>: Custom (SLA, SSO, usage-based licensing, private support).</li>
+        </ul>
+        <a class="btn btn-success" href="mailto:mike@qemd.io?subject=Request%20Pricing">Request Pricing</a>
+      </div>
+
+      <div class="spec-section">
+        <h3>Roadmap</h3>
+        <ul>
+          <li>PyPI package & CLI entrypoint</li>
+          <li>Public benchmarks (TruthfulQA/HaluEval)</li>
+          <li>Azure/AWS marketplace listings</li>
+          <li>GitHub demo notebook & docs site</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="mt-4">
+      <p>&copy; 2025 QEMD-ENTRa. All rights reserved. Patent-pending modules.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
